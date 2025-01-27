@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer - Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        /* Loader styles */
+        .loader {
+            display: none; /* Hidden initially */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .loader img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+        }
+
+        /* Styling for the "Please wait" message */
+        .loading-message {
+            display: none; /* Hidden initially */
+            font-size: 18px;
+            color: #00796b;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-dashboard">
+        <h1>Enter your YouTube URL</h1>
+
+        <form id="summaryForm" action="/dashboard" method="POST" onsubmit="showLoader()">
+            <input type="url" name="url" placeholder="Enter your YouTube URL" required>
+            <button type="submit">Summarize</button>
+        </form>
+
+        <!-- Loader shown while summarizing -->
+        <div class="loader" id="loader">
+            <img src="https://i.gifer.com/4V1f.gif" alt="Loading..."> <!-- A simple loading gif -->
+            <div class="loading-message">Please wait, generating summary...</div>
+        </div>
+
+        {% if summary %}
+        <h3>Summary</h3>
+        <p>{{ summary }}</p>
+        {% endif %}
+    </div>
+
+    <script>
+        function showLoader() {
+            document.getElementById('loader').style.display = 'block'; // Show the loader
+            document.querySelector('.loading-message').style.display = 'block'; // Show the loading message
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer - Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container-dashboard">
+    <h1>Enter your YouTube URL</h1>
+   
+    <form action="/dashboard" method="POST">
+        <input type="url" name="url" placeholder="Enter your YouTube URL" required>
+        <button type="submit">Summarize</button>
+    </form>
+    {% if summary %}
+    <h3>Summary:</h3>
+    <p>{{ summary }}</p>
+    {% endif %}
+    </div>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer - Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container-dashboard">
+    <h1>Enter your YouTube URL</h1>
+   
+    <form action="/dashboard" method="POST">
+        <input type="url" name="url" placeholder="Enter your YouTube URL" required>
+        <button type="submit">Summarize</button>
+    </form>
+    {% if summary %}
+    <h3>Summary:</h3>
+    <p>{{ summary }}</p>
+    {% endif %}
+    </div>
+</body>
+</html> -->

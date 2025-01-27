@@ -1,0 +1,137 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(135deg, #a2e8ea, #70c1b3, #ffb6b9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex; /* Make the container a flexbox */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end; /* Align content to the right edge */
+}
+
+.image-section {
+  width: 500px;
+  flex: 1; /* Take up the remaining space in the container */
+  background-image: url("image.jpg"); /* Replace with your image path */
+  background-size: cover; /* Scale image to fit container */
+  background-position: center; /* Center image within container */
+}
+
+.login-form {
+  flex: 1; /* Take up remaining space in the container */
+  padding: 20px;
+  padding-top: 200px;
+  background-image: linear-gradient(135deg, #a2e8ea, #70c1b3, #ffb6b9);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 44px;
+  color: #00695c;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+button {
+  width: 95%;
+  padding: 16px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.signup-link a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: none;
+}
+
+.container-dashboard {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Increased width for dashboard */
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #00695c;
+}
+
+input[type="url"] {
+  width: 90%;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 95%;
+  padding: 12px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: block; /* Ensure the error message is block-level */
+}

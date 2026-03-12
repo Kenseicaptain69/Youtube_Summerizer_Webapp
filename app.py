@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
 # AssemblyAI API Key
-ASSEMBLYAI_API_KEY = '452837939d2b4902808668041543d53d'
+ASSEMBLYAI_API_KEY = ''
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 
 # MySQL Database connection

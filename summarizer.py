@@ -6,7 +6,7 @@ import sys
 import os
 
 # Set your API keys
-ASSEMBLYAI_API_KEY = '452837939d2b4902808668041543d53d'
+ASSEMBLYAI_API_KEY = ''
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 
 def download_audio_from_youtube(video_url, output_file='audio'):
